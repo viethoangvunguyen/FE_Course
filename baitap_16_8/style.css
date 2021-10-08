@@ -1,0 +1,347 @@
+* {
+    font-family: 'Arial';
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+.alignment {
+    margin: 0 250px;
+}
+/* CSS for header */
+.navbar_top {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(12, 147, 209);
+    box-shadow: 3px 3px 10px #8b7c7c;
+    justify-content: space-around;
+}
+.be_underline {
+    border-bottom: 2px solid yellow;
+}
+.navbar_top-right li {
+    display: inline-block;
+    color: white;
+    font-size: 17px;
+    padding: 18px 14px;
+}
+.navbar_top-right li a {
+    text-decoration: none;
+    color: white;
+}
+.navbar_top-left-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-top: 7px;
+    margin-right: 10px;
+}
+.navbar_top-left h3 {
+    font-size: 20px;
+    color: white;
+    display: inline-block;
+    vertical-align: 15px;
+}
+
+@keyframes Move {
+    from {
+        top: 70px;
+    }
+    to {
+        top: 0px;
+    }
+
+}
+
+.navbar_img {
+    display: flex;
+    height: 320px;
+    background-image: url('./img/banner.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.navbar_img::before {
+    content:"";
+    background-color: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+}
+.navbar_wrap {
+    z-index: 2;
+}
+.navbar_img-content { 
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+    animation-name: move;
+    animation-duration: 1.3s;
+}
+@keyframes move {
+    0% {
+        transform: translateY(-120px);
+    } 
+    100% {
+        transform: translateY(0px);
+    }
+}
+.navbar_img-submit {
+    /* width: 190px; */
+    margin-top: 17px;
+    padding: 7px 25px;
+    background-color: rgb(12, 147, 209);
+    border-radius: 5px;
+    color: white;
+}
+.navbar_img-submit:hover {
+    background-color: yellow;
+}
+.navbar_img-submit p {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.content {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content_text1 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+.content_text2 {
+    text-align: left;
+}
+.content_text2::before {
+    content: "\AB";
+    float: top;
+    font-size: 35px;
+    color: rgb(12, 147, 209);
+    margin-right: 10px;
+}
+.content_text3::after {
+    content: "\BB";
+    float: right;
+    font-size: 35px;
+    color: rgb(12, 147, 209);
+}
+.content_text3 {
+    text-align: center;
+}
+
+/* CSS for Course */
+.course_row{
+    display: flex;
+}
+.course h3 {
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+.course_box {
+    width: 240px;
+    height: 350px;
+    border: 1px solid #e0dbdb;
+    margin: 0 20px 10px 0;
+    border-radius: 4px;
+    flex-direction: column;
+}
+.course_box:hover {
+    box-shadow: 3px 3px 10px #8e8e8e;
+}
+.course_box-img {
+    width: 239px;
+    background-size: cover;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.course_box-if {
+    padding:8px 8px;
+}
+.course_box-if-img {
+    width: 50px;
+    height: 50px;
+    background-image: url(/img/mt.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin-top: 10px;
+}
+.course_box-if-name{
+    position: relative;
+    top: -34px;
+    left: 74px;
+}
+.course_box-if-price {
+    float: right;
+    margin-right: 5px;
+    margin-top: 10px;
+    color: red;
+}
+
+/* CSS for Our Teachers */
+.teacher > h3 {
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+.teachers {
+    position: relative;
+    width: 500px;
+    height: 160px;
+    border-radius: 4px;
+    border: 1px solid rgb(184, 178, 178);
+    margin-bottom: 15px;
+    display: flex;
+}
+.teachers_box {
+    width: 240px;
+    height: 160px;
+    overflow: hidden;
+}
+.teachers_img {
+    width: 240px;
+    height: 160px;
+    background-image: url(./img/my-tam.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    transition: all 1s; 
+}
+.teachers_img:hover {
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.5);
+    cursor: pointer;
+}
+.teachers_img_course {
+    background-color: rgba(27, 24, 24, 0.6);
+    width: 100px;
+    height: 27px;
+    color: aliceblue;
+    position: absolute;
+    bottom: 9px;
+    left: 9px;
+    padding: 4px 6px;
+    text-align: center;
+}
+.teachers_if {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.teachers:hover {
+    box-shadow: 3px 3px 10px #8e8e8e;
+}
+.teachers_if_name {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.teachers_if_job {
+    margin-top: 10px;
+    font-style: italic;
+}
+.teachers_if_bir {
+    margin-top: 10px;
+}
+.teacher_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*CSS for Contact */
+.contact > h3 {
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+.contact_img {
+    width: 50%;
+    height: 300px;
+    background-size: cover;
+    float: left;
+    background-image: url(./img/abc.png);
+}
+.contact_fill {
+    float:left;
+    width: 50%;
+    height: 300px;
+    border-top: 1px solid rgb(87, 88, 88);
+    border-right: 1px solid rgb(87, 88, 88);
+    border-bottom: 1px solid rgb(87, 88, 88);
+    padding-right: 250px;
+    padding-left: 30px;
+}
+.contact_fill-form {
+    padding-right: 0;
+    width: 445px;
+    height: 170px;
+}
+.contact_fill-form h3 {
+    margin-top: 15px;
+    margin-bottom: 4px;
+}
+.contact_fill button {
+    position: relative;
+    top: 40px;
+    right: -311px;
+}
+.from_gr {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+.from_gr-txt {
+    width: 300px;
+    height: 30px;
+}
+.from_gr p {
+    transform: translateY(7px);
+}
+/* Css for footer */
+.footer {
+    margin-top: 350px;
+    height: 140px;
+    background-color: rgb(12, 147, 209);
+    padding: 21px 0px 6px 150px;
+    display: flex;
+}
+.footer_txt {
+    margin-top: 15px;
+    color: white;
+}
+.footer_left {
+    margin-left: 94px;
+    margin-right: 180px;
+}
+.footer_left-img {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.footer_right li {
+    list-style-type: none;
+    padding: 5px 0;
+}
+.footer_right li a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
